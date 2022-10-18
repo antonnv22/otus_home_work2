@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - includeAll:
+      path: db/changelog/changeset
+#      swap commented path values in order run liquibase migrations from gradle plugin
+#      path: src/main/resources/db/changelog/sql/

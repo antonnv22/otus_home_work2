@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${DB_HOST}:5432/${DB_NAME}
+    username: postgres
+    password: postgres
+    hikari:
+      initialization-fail-timeout: 0
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: create
+#  liquibase:
+#    url: jdbc:postgresql://${DB_HOST}:5432/${DB_NAME}
+#    user: postgres
+#    password: postgres
+#    changeLog: classpath:db/changelog/db.changelog-master.yaml

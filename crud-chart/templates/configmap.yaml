@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config
+data:
+  DB_HOST: "postgres-db-lb"
+  DB_NAME: "postgres"
+  DB_USER: "postgres"
+  APP_ENV: "prod"
+  HTTP_PORT: "8000"
