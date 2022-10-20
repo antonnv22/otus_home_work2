@@ -8,7 +8,7 @@ image:
   repository: antonnv22/crud
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "0.0.56"
+  tag: "0.0.59"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -38,7 +38,7 @@ securityContext: {}
 
 service:
   type: NodePort
-  port: 8080
+  port: 80
 
 ingress:
   enabled: true

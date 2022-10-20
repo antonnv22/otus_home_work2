@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "e21578c1-8f24-4ffc-8d2a-bbdeb1e327fd",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14564116"
+	},
+	"item": [
+		{
+			"name": "Get status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "arch.homework/probe/ready",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"probe",
+						"ready"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get status 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "arch.homework/probe/live",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"probe",
+						"live"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"gena\",\r\n    \"firstName\": \"gena\",\r\n    \"lastName\": \"Bobkov\",\r\n    \"email\": \"gena@bobkov.ru\",\r\n    \"phone\": \"+7916123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "arch.homework/user",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"gena2\",\r\n    \"firstName\": \"gena2\",\r\n    \"lastName\": \"Bobkov2\",\r\n    \"email\": \"gena@bobkov2.ru\",\r\n    \"phone\": \"+7916123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "arch.homework/user?userId=1",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "arch.homework/user?userId=1",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "arch.homework/user?userId=1",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
