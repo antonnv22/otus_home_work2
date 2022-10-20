@@ -34,4 +34,12 @@ public class UserService {
         userRepository.deleteById(userId);
         return new ErrorDto();
     }
+
+    public UserDto updateUser(Long userId, UserDto userDto) {
+        User user = userMapper.toModel(userDto);
+        user.setId(userId);
+        User newUser = userRepository.save(user);
+        log.info("update user " + newUser);
+        return userMapper.toDto(newUser);
+    }
 }
