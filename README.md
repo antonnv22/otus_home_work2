@@ -2,6 +2,7 @@ otus_home_work2
 1) В CRUD приложение и CRUD-CHART шаблоны helm
 
 2) MAKEFILE для развертывания расположен в crud
+
 .PHONY: build
 
 build:
@@ -21,7 +22,9 @@ newman:
 	cd .. && newman run crud-chart/postman/collection.json
 
 3) Развернутое приложение в миникуб
+
 PS D:\otus\otus_homework2> kubectl get all --namespace crud
+
 NAME                       READY   STATUS    RESTARTS   AGE
 pod/crud-bbff7948c-tqtll   1/1     Running   0          5m27s
 pod/postgresql-db-0        1/1     Running   0          5m27s
@@ -41,6 +44,7 @@ statefulset.apps/postgresql-db   1/1     5m27s
 
 4) Проверка newman 
 PS D:\otus\otus_homework2> newman run crud-chart/postman/collection.json
+
 newman
 
 New Collection
@@ -84,6 +88,7 @@ New Collection
 └────────────────────────────────────────────────────────────────┘
 
 5) Креды в секретах 
+
 apiVersion: v1
 kind: Secret
 type: Opaque
